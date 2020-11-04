@@ -3,13 +3,6 @@
 if( !mainSyngenta )
     var mainSyngenta = {};
 
-mainSyngenta.mobileMenu = function(){
-    let MobileBtn = document.getElementById('MobileMenuBtn');
-    MobileBtn.addEventListener('touch', function(){
-        console.log('show MobileMenuBtn');
-    })
-}
-
 mainSyngenta.init = function(){
     console.log('Init Syngenta Berries...');
 }
@@ -33,7 +26,6 @@ mainSyngenta.homeSwipper = function(){
 
 
 window.onload = function(){
-    mainSyngenta.mobileMenu();
     mainSyngenta.init();
     mainSyngenta.homeSwipper();
 }
