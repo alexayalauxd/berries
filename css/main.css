@@ -1,6 +1,9 @@
 /* Main Syngenta Blue Color #004796 */
 /* Main Syngenta Pink Color #f63f57 */
 
+/* ----------
+    Body 
+---------- */
 html, body{
     margin: 0;
     padding: 0;
@@ -24,6 +27,10 @@ img{
 h1, h2, h3, h4, h5, p{
     padding: 0;
     margin: 0;
+}
+
+a {
+    color: #fff;
 }
 
 .txt-white{ color: #fff !important; }
@@ -61,9 +68,6 @@ h1, h2, h3, h4, h5, p{
     position: relative;
 }
 
-a {
-    color: #fff;
-}
 
 #HomeMainContainer header{
     position: fixed;
