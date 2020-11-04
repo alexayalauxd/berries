@@ -1,0 +1,677 @@
+/* Main Syngenta Blue Color #004796 */
+/* Main Syngenta Pink Color #f63f57 */
+
+html, body{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+img{
+    width: 100%;
+}
+
+*{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p{
+    padding: 0;
+    margin: 0;
+}
+
+.txt-white{ color: #fff !important; }
+.txt-black{ color: #000 !important; }
+.txt-blue{ color: #004796 !important; }
+.txt-pink{ color: #f63f57 !important; }
+
+.main-button{
+    background-color: #f63f57;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+.fll-bg{
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    padding: 0 20px;
+}
+
+#HomeMainContainer{
+    width: 100%;
+    position: relative;
+}
+
+a {
+    color: #fff;
+}
+
+#HomeMainContainer header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    /* background-image: linear-gradient(rgba(255,255,255,0.5) , rgba(255,255,255,0)); */
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+}
+
+#HomeMainContainer header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#HomeMainContainer header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+#HomeMainContainer header li a:hover,#HomeMainContainer header .menu-btn:hover {
+    background-color: #004696ec;
+    color: #fdd36b
+}
+
+#HomeMainContainer header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#HomeMainContainer header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background-color: #004696ec;
+}
+
+#HomeMainContainer header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+#HomeMainContainer header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+#HomeMainContainer header .menu-icon .navicon:before,
+#HomeMainContainer header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+#HomeMainContainer header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+#HomeMainContainer header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+#HomeMainContainer header .menu-btn {
+    display: none;
+}
+
+#HomeMainContainer header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+#HomeMainContainer header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+#HomeMainContainer header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+#HomeMainContainer header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+#HomeMainContainer header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+#HomeMainContainer header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 974px) {
+    #HomeMainContainer header li {
+        float: left;
+    }
+    #HomeMainContainer header li a {
+        padding: 20px 30px;
+    }
+    #HomeMainContainer header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    #HomeMainContainer header .menu-icon {
+        display: none;
+    }
+}
+
+/* #HomeMainContainer header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 20px 0;
+}
+#HomeMainContainer header .container{
+    display: flex;
+}
+#HomeMainContainer header div#MainLogo{
+    width: 40%;
+}
+#HomeMainContainer header div#MainLogo h1{
+    width: 100%;
+    max-width: 150px;
+}
+#HomeMainContainer header div#MainNav{
+    text-align: right;
+    width: 60%;
+}
+#HomeMainContainer header  div#MainNav #MobileMenuBtn{
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 25px;
+    display: block;
+}
+#HomeMainContainer header  div#MainNav #MobileMenuBtn div{
+    width: 100%;
+    margin: 2px;
+    background-color: black;
+    height: 4px;
+}
+#HomeMainContainer header div#MainNav nav{
+    display: flex;
+    width: 546px;
+    margin: 0 0 0 auto;
+    background-color: #004696ec;
+    padding: 10px;
+}
+#HomeMainContainer header div#MainNav nav a{
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-right: 1px solid #fff;
+}
+
+#HomeMainContainer header div#MainNav nav a:last-child{
+    border: none;
+}
+
+#HomeMainContainer header div#MainNav nav a:hover{
+
+    color: #fdd36b
+}
+@media(max-width: 600px){
+    #HomeMainContainer header .container{
+        display: block;
+        padding: 0;
+    }
+    #HomeMainContainer header div#MainLogo{
+        padding: 0;
+        max-width: 120px;
+        padding-left: 15px;
+    }
+    #HomeMainContainer header div#MainLogo,
+    #HomeMainContainer header div#MainNav{
+        width: 100%;
+    }
+    #HomeMainContainer header div#MainNav nav{
+        display: none;
+        width: 100%;
+    }
+    #HomeMainContainer header div#MainNav nav a{
+        border:none;
+        border-bottom: 1px solid rgb(134, 217, 255);
+        text-align: center;
+        padding: 15px 0;
+    }
+} */
+
+#HomeMainContainer section{
+    width: 100%;
+}
+
+#HomeMainContainer section#MainBanner{
+    height: 800px;
+    background-color: rgb(235, 235, 235);
+}
+
+#HomeMainContainer section#MainBanner .swiper-container,
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper,
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide
+{
+    width: 100%;
+    height: 100%;
+}
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container{
+    height: 100%;
+    position: relative;
+}
+
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont{
+    position: absolute;
+    width: 60%;
+    bottom: 30%;
+}
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont h2{
+    font-size: 4rem;
+    color: #004796;
+}
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont p{
+    font-size: 2.5rem;
+    padding-bottom: 50px;
+}
+#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont a{
+    min-width: 300px;
+}
+#HomeMainContainer section#MainBanner .swiper-container .swiper-pagination{
+    background-color: white;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#HomeMainContainer section#MainBanner .swiper-container .swiper-pagination .swiper-pagination-bullet{
+    background: none;
+    width: 20px;
+    height: 25px;
+    padding: 5px 0;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+@media(max-width: 600px){
+    #HomeMainContainer section#MainBanner{
+        height: 350px;
+    }
+    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont{
+        width: 100%;
+        bottom: 20%;
+        left: 0;
+        padding: 0 20px;
+        text-align: center;
+    }
+    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont h2{
+        font-size: 2rem;
+    }
+    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont p{
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont a{
+        font-size: 1rem;
+        min-width: inherit;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#HomeMainContainer section#MainItems{
+    padding: 40px;
+    padding:100px 0;
+}
+#HomeMainContainer section#MainItems div#MainItemsTitles{
+    padding: 0 0 100px 0;
+}
+#HomeMainContainer section#MainItems div#MainItemsTitles h3{
+    color: #f63f57;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4rem;
+}
+#HomeMainContainer section#MainItems div#MainItemsTitles p{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+#HomeMainContainer section#MainItems div#ItemsCont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
+    padding: 10px 30px 70px 30px;
+    width: 33.33%;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info{
+    width: 100%;
+    min-height: 300px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p{
+    font-size: 1.4rem;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.subtitle-txt{
+    height: 50px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+    height: 130px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item{
+    display: flex;
+    padding: 20px 0;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item a{
+    color: #f63f57;
+    text-decoration: underline;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item a img{
+    position: absolute;
+    width: 20px;
+    left: 0;
+    top: 10px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item a:first-child img{
+    top: 5px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item a p{
+    font-size: 1rem;
+    padding-left: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.h80{
+    height: 80px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img{
+    display: block;
+    padding-bottom: 20px;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.img90{
+    width: 90%;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.img50{
+    width: 50%;
+}
+#HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.img70{
+    width: 70%;
+}
+@media(max-width: 600px){
+    #HomeMainContainer section#MainItems div#MainItemsTitles h3{
+        font-size: 2rem;
+    }
+    #HomeMainContainer section#MainItems div#MainItemsTitles p{
+        font-size: 1rem;
+    }
+    #HomeMainContainer section#MainItems div#ItemsCont{
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
+        padding: 0 0 50px 0;
+        margin: 0 0 50px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img{
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#HomeMainContainer section#MainSlogan{
+    padding: 200px 0;
+}
+#HomeMainContainer section#MainSlogan .container .info-cont{
+    width: 50%;
+    padding:0 50px;
+}
+#HomeMainContainer section#MainSlogan .container .info-cont h2{
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+#HomeMainContainer section#MainSlogan .container .info-cont p{
+    color: white;
+    font-size: 2rem;
+}
+@media(max-width: 600px){
+    #HomeMainContainer section#MainSlogan{
+        padding: 100px 0;
+    }
+    #HomeMainContainer section#MainSlogan .container .info-cont{
+        width: 100%;
+        padding: 0;
+    }
+    #HomeMainContainer section#MainSlogan .container .info-cont h2{
+        padding-bottom: 25px;
+        font-size: 2rem;
+    }
+    #HomeMainContainer section#MainSlogan .container .info-cont p{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+#HomeMainContainer section#MainCTA{
+    padding:80px 0;
+    background-color: #f63f57;
+}
+#HomeMainContainer section#MainCTA .container{
+    display: flex;
+}
+#HomeMainContainer section#MainCTA .container .info-cont{
+    width: 50%;
+}
+#HomeMainContainer section#MainCTA .container .info-cont h3{
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+#HomeMainContainer section#MainCTA .container .info-cont p{
+    color: white;
+    font-size: 2rem;
+}
+#HomeMainContainer section#MainCTA .container .info-cont a{
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: #f63f57;
+    border: 4px solid #f63f57;
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 5% auto;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#HomeMainContainer section#MainCTA .container .info-cont a:hover{
+    border: 4px solid #ff8999;
+    text-decoration: underline;
+}
+@media(max-width: 600px){
+    #HomeMainContainer section#MainCTA .container{
+        display: block;
+    }
+    #HomeMainContainer section#MainCTA .container .info-cont{
+        width: 100%;
+        text-align: center;
+    }
+    #HomeMainContainer section#MainCTA .container .info-cont h3{
+        font-size: 2rem;
+    }
+    #HomeMainContainer section#MainCTA .container .info-cont p{
+        font-size: 1rem;
+    }
+    #HomeMainContainer section#MainCTA .container .info-cont a{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    padding: 150px;
+}
+footer div.container{
+    display: flex;
+}
+footer div.container div.info-cont{
+    width: 50%;
+}
+footer div.container div.info-cont p{
+    color: white;
+    font-size: 1.5rem;
+}
+footer div.container div.info-cont h4{
+    font-weight: bold;
+    color: #fff;
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+footer div.container div.info-cont div.sn-links{
+    display: flex;
+    padding: 20px 0;
+}
+footer div.container div.info-cont div.sn-links a{
+    width: 30px;
+    margin-right: 10px;
+    display: block;
+}
+footer #FooterLegal{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 0 0;
+}
+
+footer #FooterLegal a{
+    color: white;
+    padding: 5px;
+    padding-right: 25px;
+    margin-right: 25px;
+    font-size: 2rem;
+    border-right: 1px solid #fff;
+}
+footer #FooterLegal a:hover{
+    text-decoration: underline;
+}
+
+footer #FooterLegal a:last-child{
+    padding-right: 0;
+    margin-right: 0;
+    border: none;
+}
+@media(max-width: 600px){
+    footer{
+        padding: 50px 30px;
+    }
+    footer div.container{
+        display: block;
+    }
+    footer div.container div.info-cont{
+        width: 100%;
+        margin-top: 50px;
+    }
+    footer #FooterLegal{
+        display: block;
+        padding: 50px 0 0 0;
+    }
+    footer #FooterLegal a{
+        color: white;
+        padding: 5px;
+        display: block;
+        padding-right: 15px;
+        margin-right: 5px;
+        font-size: 1rem;
+        border-right: none;
+    }
+}
