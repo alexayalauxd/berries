@@ -68,12 +68,13 @@ a {
     position: relative;
 }
 
-
+/* ----------
+    NavBar 
+---------- */
 #HomeMainContainer header{
     position: fixed;
     width: 100%;
     z-index: 2;
-    /* background-image: linear-gradient(rgba(255,255,255,0.5) , rgba(255,255,255,0)); */
     left: 0;
     right: 0;
     top: 0;
@@ -193,6 +194,9 @@ a {
     }
 }
 
+/* ----------
+    NavBar Old
+---------- */
 /* #HomeMainContainer header{
     position: fixed;
     width: 100%;
@@ -281,6 +285,9 @@ a {
     }
 } */
 
+/* ----------
+    Banner
+---------- */
 #HomeMainContainer section{
     width: 100%;
 }
@@ -363,18 +370,9 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* ----------
+    Items
+---------- */
 #HomeMainContainer section#MainItems{
     padding: 40px;
     padding:100px 0;
@@ -482,15 +480,9 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
+/* ----------
+    Slogan
+---------- */
 #HomeMainContainer section#MainSlogan{
     padding: 200px 0;
 }
@@ -524,16 +516,9 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+/* ----------
+    RedSection 
+---------- */
 #HomeMainContainer section#MainCTA{
     padding:80px 0;
     background-color: #f63f57;
@@ -590,16 +575,9 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+/* ----------
+    Footer 
+---------- */
 footer{
     padding: 150px;
 }
@@ -628,6 +606,9 @@ footer div.container div.info-cont div.sn-links a{
     margin-right: 10px;
     display: block;
 }
+/* ----------
+    Legal 
+---------- */
 footer #FooterLegal{
     display: flex;
     justify-content: center;
