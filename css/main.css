@@ -26,6 +26,164 @@ h1, h2, h3, h4, h5, p{
     margin: 0;
 }
 
+section#MainBanner{
+    height: 800px;
+    background-color: rgb(235, 235, 235);
+}
+section#MainBanner .slider-infocont{
+    position: absolute;
+    width: 60%;
+    bottom: 30%;
+}
+section#MainBanner .slider-infocont h2{
+    font-size: 4rem;
+    color: #004796;
+}
+section#MainBanner .slider-infocont p{
+    font-size: 2.5rem;
+    padding-bottom: 50px;
+}
+section#MainBanner .slider-infocont a{
+    min-width: 300px;
+}
+@media(max-width: 600px){
+    section#MainBanner{
+        height: 350px;
+    }
+    section#MainBanner .slider-infocont{
+        width: 100% !important;
+        bottom: 20% !important;
+        left: 0 !important;
+        padding: 0 20px !important;
+        text-align: center !important;
+    }
+    section#MainBanner .slider-infocont h2{
+        font-size: 2rem;
+    }
+    section#MainBanner .slider-infocont p{
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+    section#MainBanner .slider-infocont a{
+        font-size: 1rem;
+        min-width: inherit;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section#MainCTA{
+    padding:80px 0;
+    background-color: #f63f57;
+}
+section#MainCTA .container{
+    display: flex;
+}
+section#MainCTA .container .info-cont{
+    width: 50%;
+}
+section#MainCTA .container .info-cont h3{
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+section#MainCTA .container .info-cont p{
+    color: white;
+    font-size: 2rem;
+}
+section#MainCTA .container .info-cont a{
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: #f63f57;
+    border: 4px solid #f63f57;
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 5% auto;
+    font-size: 3rem;
+    font-weight: bold;
+}
+section#MainCTA .container .info-cont a:hover{
+    border: 4px solid #ff8999;
+    text-decoration: underline;
+}
+@media(max-width: 600px){
+    section#MainCTA .container{
+        display: block;
+    }
+    section#MainCTA .container .info-cont{
+        width: 100%;
+        text-align: center;
+    }
+    section#MainCTA .container .info-cont h3{
+        font-size: 2rem;
+    }
+    section#MainCTA .container .info-cont p{
+        font-size: 1rem;
+    }
+    section#MainCTA .container .info-cont a{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+section#MainSlogan{
+    padding: 200px 0;
+}
+section#MainSlogan .container .info-cont{
+    width: 50%;
+    padding:0 50px;
+}
+section#MainSlogan .container .info-cont h2{
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+section#MainSlogan .container .info-cont p{
+    color: white;
+    font-size: 2rem;
+}
+@media(max-width: 600px){
+    section#MainSlogan{
+        padding: 100px 0;
+    }
+    section#MainSlogan .container .info-cont{
+        width: 100%;
+        padding: 0;
+    }
+    section#MainSlogan .container .info-cont h2{
+        padding-bottom: 25px;
+        font-size: 2rem;
+    }
+    section#MainSlogan .container .info-cont p{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .txt-white{ color: #fff !important; }
 .txt-black{ color: #000 !important; }
 .txt-blue{ color: #004796 !important; }
@@ -56,7 +214,8 @@ h1, h2, h3, h4, h5, p{
     padding: 0 20px;
 }
 
-#HomeMainContainer{
+#HomeMainContainer,
+#TecnicosContainer{
     width: 100%;
     position: relative;
 }
@@ -65,18 +224,19 @@ a {
     color: #fff;
 }
 
-#HomeMainContainer header{
+header{
     position: fixed;
     width: 100%;
     z-index: 2;
     /* background-image: linear-gradient(rgba(255,255,255,0.5) , rgba(255,255,255,0)); */
+    background-color: rgba(255, 255, 255, 0.7);
     left: 0;
     right: 0;
     top: 0;
     padding: 20px 75px;
 }
 
-#HomeMainContainer header ul {
+header ul {
     margin-top: 20px;
     padding: 0;
     list-style: none;
@@ -84,18 +244,20 @@ a {
     background-color: #004696ec;
 }
 
-#HomeMainContainer header li a {
+header li a {
     display: block;
     padding: 20px 20px;
     text-decoration: none;
+    font-size: 1.3rem;
 }
 
-#HomeMainContainer header li a:hover,#HomeMainContainer header .menu-btn:hover {
+header li a:hover,header .menu-btn:hover, header li a.active{
     background-color: #004696ec;
-    color: #fdd36b
+    color: #fdd36b;
+    text-decoration: underline;
 }
 
-#HomeMainContainer header .logo {
+header .logo {
     display: block;
     float: left;
     max-width: 180px;
@@ -103,14 +265,14 @@ a {
 
 }
 
-#HomeMainContainer header .menu {
+header .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
     background-color: #004696ec;
 }
 
-#HomeMainContainer header .menu-icon {
+header .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -119,7 +281,7 @@ a {
     user-select: none;
 }
 
-#HomeMainContainer header .menu-icon .navicon {
+header .menu-icon .navicon {
     background: #333;
     display: block;
     height: 2px;
@@ -128,8 +290,8 @@ a {
     width: 18px;
 }
 
-#HomeMainContainer header .menu-icon .navicon:before,
-#HomeMainContainer header .menu-icon .navicon:after {
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
     background: #333;
     content: '';
     display: block;
@@ -139,151 +301,76 @@ a {
     width: 100%;
 }
 
-#HomeMainContainer header .menu-icon .navicon:before {
+header .menu-icon .navicon:before {
     top: 5px;
 }
 
-#HomeMainContainer header .menu-icon .navicon:after {
+header .menu-icon .navicon:after {
     top: -5px;
 }
 
-#HomeMainContainer header .menu-btn {
+header .menu-btn {
     display: none;
 }
 
-#HomeMainContainer header .menu-btn:checked ~ .menu {
-    max-height: 240px;
+header .menu-btn:checked ~ .menu {
+    max-height: 351px;
 }
 
-#HomeMainContainer header .menu-btn:checked ~ .menu-icon .navicon {
+header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
 }
 
-#HomeMainContainer header .menu-btn:checked ~ .menu-icon .navicon:before {
+header .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
 
-#HomeMainContainer header .menu-btn:checked ~ .menu-icon .navicon:after {
+header .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
 }
 
-#HomeMainContainer header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-#HomeMainContainer header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
 
 @media (min-width: 841px) {
-    #HomeMainContainer header li {
+    header li {
         float: left;
     }
-    #HomeMainContainer header li a {
+    header li a {
         padding: 20px 15px;
     }
-    #HomeMainContainer header .menu {
+    header .menu {
         clear: none;
         float: right;
         max-height: none;
     }
-    #HomeMainContainer header .menu-icon {
+    header .menu-icon {
         display: none;
     }
 }
 
-/* #HomeMainContainer header{
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8);
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 20px 0;
-}
-#HomeMainContainer header .container{
-    display: flex;
-}
-#HomeMainContainer header div#MainLogo{
-    width: 40%;
-}
-#HomeMainContainer header div#MainLogo h1{
-    width: 100%;
-    max-width: 150px;
-}
-#HomeMainContainer header div#MainNav{
-    text-align: right;
-    width: 60%;
-}
-#HomeMainContainer header  div#MainNav #MobileMenuBtn{
-    width: 30px;
-    position: absolute;
-    z-index: 2;
-    top: 25px;
-    right: 25px;
-    display: block;
-}
-#HomeMainContainer header  div#MainNav #MobileMenuBtn div{
-    width: 100%;
-    margin: 2px;
-    background-color: black;
-    height: 4px;
-}
-#HomeMainContainer header div#MainNav nav{
-    display: flex;
-    width: 546px;
-    margin: 0 0 0 auto;
-    background-color: #004696ec;
-    padding: 10px;
-}
-#HomeMainContainer header div#MainNav nav a{
-    display: block;
-    padding: 5px 15px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-right: 1px solid #fff;
-}
-
-#HomeMainContainer header div#MainNav nav a:last-child{
-    border: none;
-}
-
-#HomeMainContainer header div#MainNav nav a:hover{
-
-    color: #fdd36b
-}
-@media(max-width: 600px){
-    #HomeMainContainer header .container{
-        display: block;
+@media (max-width: 600px) {
+    header{
         padding: 0;
+        background-color: rgba(255, 255, 255, 1);
     }
-    #HomeMainContainer header div#MainLogo{
-        padding: 0;
-        max-width: 120px;
-        padding-left: 15px;
-    }
-    #HomeMainContainer header div#MainLogo,
-    #HomeMainContainer header div#MainNav{
-        width: 100%;
-    }
-    #HomeMainContainer header div#MainNav nav{
-        display: none;
-        width: 100%;
-    }
-    #HomeMainContainer header div#MainNav nav a{
-        border:none;
-        border-bottom: 1px solid rgb(134, 217, 255);
-        text-align: center;
-        padding: 15px 0;
-    }
-} */
-
-#HomeMainContainer section{
-    width: 100%;
 }
 
-#HomeMainContainer section#MainBanner{
-    height: 800px;
-    background-color: rgb(235, 235, 235);
+
+
+
+
+
+
+
+
+
+#HomeMainContainer section,
+#TecnicosContainer section
+{
+    width: 100%;
 }
 
 #HomeMainContainer section#MainBanner .swiper-container,
@@ -298,22 +385,6 @@ a {
     position: relative;
 }
 
-#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont{
-    position: absolute;
-    width: 60%;
-    bottom: 30%;
-}
-#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont h2{
-    font-size: 4rem;
-    color: #004796;
-}
-#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont p{
-    font-size: 2.5rem;
-    padding-bottom: 50px;
-}
-#HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont a{
-    min-width: 300px;
-}
 #HomeMainContainer section#MainBanner .swiper-container .swiper-pagination{
     background-color: white;
     width: 200px;
@@ -335,29 +406,7 @@ a {
     border-radius: 2px;
     border: 1px solid black;
 }
-@media(max-width: 600px){
-    #HomeMainContainer section#MainBanner{
-        height: 350px;
-    }
-    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont{
-        width: 100%;
-        bottom: 20%;
-        left: 0;
-        padding: 0 20px;
-        text-align: center;
-    }
-    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont h2{
-        font-size: 2rem;
-    }
-    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont p{
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-    }
-    #HomeMainContainer section#MainBanner .swiper-container .swiper-wrapper .swiper-slide .container .slider-infocont a{
-        font-size: 1rem;
-        min-width: inherit;
-    }
-}
+
 
 
 
@@ -487,114 +536,6 @@ a {
 
 
 
-#HomeMainContainer section#MainSlogan{
-    padding: 200px 0;
-}
-#HomeMainContainer section#MainSlogan .container .info-cont{
-    width: 50%;
-    padding:0 50px;
-}
-#HomeMainContainer section#MainSlogan .container .info-cont h2{
-    color: white;
-    font-size: 3rem;
-    padding-bottom: 50px;
-}
-#HomeMainContainer section#MainSlogan .container .info-cont p{
-    color: white;
-    font-size: 2rem;
-}
-@media(max-width: 600px){
-    #HomeMainContainer section#MainSlogan{
-        padding: 100px 0;
-    }
-    #HomeMainContainer section#MainSlogan .container .info-cont{
-        width: 100%;
-        padding: 0;
-    }
-    #HomeMainContainer section#MainSlogan .container .info-cont h2{
-        padding-bottom: 25px;
-        font-size: 2rem;
-    }
-    #HomeMainContainer section#MainSlogan .container .info-cont p{
-        font-size: 1rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-#HomeMainContainer section#MainCTA{
-    padding:80px 0;
-    background-color: #f63f57;
-}
-#HomeMainContainer section#MainCTA .container{
-    display: flex;
-}
-#HomeMainContainer section#MainCTA .container .info-cont{
-    width: 50%;
-}
-#HomeMainContainer section#MainCTA .container .info-cont h3{
-    color: white;
-    font-size: 3rem;
-    padding-bottom: 30px;
-}
-#HomeMainContainer section#MainCTA .container .info-cont p{
-    color: white;
-    font-size: 2rem;
-}
-#HomeMainContainer section#MainCTA .container .info-cont a{
-    border-radius: 10px;
-    padding: 20px 40px;
-    color: #f63f57;
-    border: 4px solid #f63f57;
-    background-color: #fff;
-    display: block;
-    text-align: center;
-    width: 300px;
-    margin: 5% auto;
-    font-size: 3rem;
-    font-weight: bold;
-}
-#HomeMainContainer section#MainCTA .container .info-cont a:hover{
-    border: 4px solid #ff8999;
-    text-decoration: underline;
-}
-@media(max-width: 600px){
-    #HomeMainContainer section#MainCTA .container{
-        display: block;
-    }
-    #HomeMainContainer section#MainCTA .container .info-cont{
-        width: 100%;
-        text-align: center;
-    }
-    #HomeMainContainer section#MainCTA .container .info-cont h3{
-        font-size: 2rem;
-    }
-    #HomeMainContainer section#MainCTA .container .info-cont p{
-        font-size: 1rem;
-    }
-    #HomeMainContainer section#MainCTA .container .info-cont a{
-        font-size: 1.5rem;
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
 
 footer{
     padding: 150px;
@@ -635,7 +576,7 @@ footer #FooterLegal a{
     padding: 5px;
     padding-right: 25px;
     margin-right: 25px;
-    font-size: 2rem;
+    font-size: 1.9rem;
     border-right: 1px solid #fff;
 }
 footer #FooterLegal a:hover{
@@ -670,5 +611,359 @@ footer #FooterLegal a:last-child{
         margin-right: 5px;
         font-size: 1rem;
         border-right: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* ************************ Tecnicos Section ********************** */
+
+#TecnicosContainer section#MainBanner .container{
+    height: 100%;
+    position: relative;
+}
+#TecnicosContainer section#MainBanner .container .slider-infocont{
+    right: 0;
+    width: 50%;
+    left: inherit;
+}
+#TecnicosContainer section#IntroSection{
+    padding: 100px 0;
+}
+#TecnicosContainer section#IntroSection h2{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: normal;
+}
+#TecnicosContainer section#IntroSection h2 a{
+    color: #f63f57;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#TecnicosContainer section#TableContacts .container table{
+    border: none;
+}
+#TecnicosContainer section#TableContacts .container table td{
+    font-size: 1.3rem;
+    padding: 5px 15px;
+}
+#TecnicosContainer section#TableContacts .container table td a{
+    color: #f63f57;
+}
+#TecnicosContainer section#TableContacts .container table th{
+    background-color: #f63f57;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+#TecnicosContainer section#TableContacts .container table tr:nth-child(even) {
+    background-color: #ffd3d9;
+}
+
+@media(max-width: 600px){
+    #TecnicosContainer section#IntroSection h2{
+        font-size: 2rem;
+    }
+    #TecnicosContainer section#TableContacts .container{
+        padding: 0;
+    }
+    #TecnicosContainer section#TableContacts .container table th{
+        font-size: 1.5rem;
+    }
+    #TecnicosContainer section#TableContacts .container table td{
+        font-size: 0.9rem;
+        padding: 5px 15px;
+    }
+}
+
+
+
+
+
+
+
+  /* ************************ Noticias Section ********************** */
+#NoticiasContainer section#MainBanner .container{
+    height: 100%;
+    position: relative;
+}
+#NoticiasContainer section#IntroSection{
+    padding: 100px 0;
+}
+#NoticiasContainer section#IntroSection h2{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: normal;
+}
+#NoticiasContainer section#IntroSection h2 a{
+    color: #f63f57;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#NoticiasContainer section#NewsContainerList .container .item-new{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+}
+
+#NoticiasContainer section#NewsContainerList .container .item-new .img-cont{
+    width: 40%;
+}
+#NoticiasContainer section#NewsContainerList .container .item-new .info-cont{
+    width: 60%;
+    padding-left: 10%;
+}
+#NoticiasContainer section#NewsContainerList .container .item-new .info-cont h3{
+    font-size: 3rem;
+}
+#NoticiasContainer section#NewsContainerList .container .item-new .info-cont p{
+    font-size: 2rem;
+}
+#NoticiasContainer section#NewsContainerList .container .item-new .info-cont a{
+    color: #f63f57;
+    font-size: 2rem;
+    display: block;
+    margin: 0 0 0 auto;
+    width: 200px;
+    padding: 20px;
+}
+
+@media(max-width: 600px){
+    #NoticiasContainer section#IntroSection h2{
+        font-size: 2rem;
+    }
+    #NoticiasContainer section#NewsContainerList .container .item-new{
+        display: block ;
+    }
+    #NoticiasContainer section#NewsContainerList .container .item-new .img-cont{
+        width: 100%;
+    }
+    #NoticiasContainer section#NewsContainerList .container .item-new .info-cont{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+  /* ************************ Calendario Section ********************** */
+
+#CalendarioContainer section#DatesListContent{
+    padding-bottom: 50px;
+}
+#CalendarioContainer section#MainBanner .container{
+    height: 100%;
+    position: relative;
+}
+#CalendarioContainer section#IntroSection{
+    padding: 100px 0;
+}
+#CalendarioContainer section#IntroSection h2{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: normal;
+}
+#CalendarioContainer section#IntroSection h2 a{
+    color: #f63f57;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#CalendarioContainer section#DatesListContent .container h3{
+    font-size: 3rem;
+    padding-bottom: 40px;
+}
+#CalendarioContainer section#DatesListContent .container table tr td{
+    padding: 40px 0;
+    border-bottom: 2px solid rgb(202, 202, 202);
+}
+#CalendarioContainer section#DatesListContent .container table td:first-child{
+    text-align: center;
+}
+#CalendarioContainer section#DatesListContent .container table td p{
+    font-size: 2rem;
+}
+#CalendarioContainer section#DatesListContent .container table td a{
+    width: 100%;
+}
+
+@media(max-width: 600px){
+    #CalendarioContainer section#DatesListContent{
+        padding-bottom: 50px;
+    }
+    #CalendarioContainer section#IntroSection{
+        padding: 50px 0;
+    }
+    #CalendarioContainer section#IntroSection h2{
+        font-size: 2rem;
+    }
+    #CalendarioContainer section#DatesListContent .container h3{
+        font-size: 2rem;
+        padding: 20px;
+    }
+    #CalendarioContainer section#DatesListContent .container{
+        padding: 0;
+    }
+    #CalendarioContainer section#DatesListContent .container table tr td{
+        padding: 15px 0;
+    }
+    #CalendarioContainer section#DatesListContent .container table td p{
+        font-size: 0.9rem;
+    }
+    #CalendarioContainer section#DatesListContent .container table td a{
+        font-size: 0.9rem;
+        padding: 5px 15px;
+        padding: 5px;
+        font-size: 0.6;
+    }
+}
+
+
+
+
+ /* ************************ Certificacion Section ********************** */
+
+ #CertificacionContainer section#DatesListContent{
+    padding-bottom: 50px;
+}
+#CertificacionContainer section#MainBanner .container{
+    height: 100%;
+    position: relative;
+}
+#CertificacionContainer section#IntroSection{
+    padding: 100px 0;
+}
+#CertificacionContainer section#IntroSection h2{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: normal;
+}
+#CertificacionContainer section#IntroSection h2 a{
+    color: #f63f57;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#CertificacionContainer section#StepcsCert .container .item-step{
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 150px;
+}
+#CertificacionContainer section#StepcsCert .container .item-step p{
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 9rem;
+    color: #f63f57;
+    font-weight: bold;
+}
+#CertificacionContainer section#StepcsCert .container .item-step h3 a{
+    color: #f63f57;
+}
+#CertificacionContainer section#StepcsCert .container .item-step h3{
+    padding-left: 150px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* #ContactoContainer */
+
+#ContactoContainer{
+    padding-top: 200px;
+}
+#ContactoContainer section#ContactFormSection .container h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #f63f57;
+}
+#ContactoContainer section#ContactFormSection .container p{
+    text-align: center;
+    font-size: 2rem;
+    padding:30px 0
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm{
+    padding: 100px 0;
+}
+#ContactoContainer section#ContactFormSection .container .row{
+    display: flex;
+}
+#ContactoContainer section#ContactFormSection .container .row .item:first-child{
+    padding-right: 20px;
+}
+#ContactoContainer section#ContactFormSection .container .row .item:last-child{
+    padding-left: 20px;
+}
+#ContactoContainer section#ContactFormSection .container .row .item{
+    width: 50%;
+    padding: 50px 0;
+}
+#ContactoContainer section#ContactFormSection .container .row .item label{
+    display: block;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color: gray;
+}
+#ContactoContainer section#ContactFormSection .container .row .item input[type="text"]{
+    display: block;
+    padding: 15px;
+    font-size: 2rem;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    border-bottom: 2px solid gray;
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    margin: 50px auto;
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox label{
+    font-size: 1rem;
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm button.main-button{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+}
+
+@media(max-width: 600px){
+    #ContactoContainer section#ContactFormSection .container #ContactForm{
+        padding: 0 0 100px 0;
+    }
+    #ContactoContainer section#ContactFormSection .container .row{
+        display: block;
+    }
+    #ContactoContainer section#ContactFormSection .container .row .item{
+        width: 100%;
+        padding: 10px 0 !important;
+    }
+    #ContactoContainer section#ContactFormSection .container .row .item label{
+        text-align: center;
+        padding-bottom: 5px;
+        font-size: 1.4rem;
+    }
+    #ContactoContainer section#ContactFormSection .container .row .item input[type="text"]{
+        font-size: 1rem;
     }
 }
