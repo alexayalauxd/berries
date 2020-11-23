@@ -921,13 +921,26 @@ footer #FooterLegal a:last-child{
     padding-bottom: 10px;
     color: gray;
 }
-#ContactoContainer section#ContactFormSection .container .row .item input[type="text"]{
+#ContactoContainer section#ContactFormSection .container .row .item input[type="text"], input[type="email"], input[type="tel"]{
     display: block;
     padding: 15px;
     font-size: 2rem;
     width: 100%;
     background-color: rgb(243, 243, 243);
     border-bottom: 2px solid gray;
+}
+#ContactoContainer section#ContactFormSection .container .row .item .row .space{
+    margin-right: 50px;
+    margin-left: 10px;
+    color: black;
+}
+#ContactoContainer section#ContactFormSection .container .row .item .dropDown{
+    display: block;
+    padding: 15px;
+    font-size: 2rem;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid gray;
 }
 #ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox{
     width: 100%;

@@ -44,50 +44,139 @@
                 <form id="ContactForm">
                     <div class="row">
                         <div class="item">
-                            <label for="InputUserName">Nombre y Apellido</label>
+                            <label for="InputUserName">*Nombre</label>
                             <input type="text" name="usrName" id="InputUserName">
                         </div>
                         <div class="item">
-                            <label for="InputUserName">Telefono</label>
-                            <input type="text" name="usrName" id="InputUserPhone">
+                            <label for="InputUserName">*Apellidos</label>
+                            <input type="text" name="usrName" id="InputUserLastName">
                         </div>
                     </div>
                     <div class="row">
                         <div class="item">
-                            <label for="InputUserName">Correo eléctronico</label>
-                            <input type="text" name="usrName" id="InputUserEmail">
+                            <label for="InputUserName">*Mail</label>
+                            <input type="email" id="email" name="email">
                         </div>
                         <div class="item">
-                            <label for="InputUserName">Telefono</label>
-                            <input type="text" name="usrName" id="InputUserLocation">
+                            <label for="InputUserName">*Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
                         </div>
                     </div>
                     <div class="row">
                         <div class="item">
-                            <label for="InputUserName">Número de hectarias de cultivo</label>
-                            <input type="text" name="usrName" id="InputUserName">
+                            <label for="InputUserName">Ocupación</label>
+                            <select name="dropDown" class="dropDown">
+                                <option value="val">Ocupación</option>
+                                <option value="val">Productor</option>
+                                <option value="val">Otro</option>
+                            </select>
                         </div>
                         <div class="item">
-                            <label for="InputUserName">Telefono</label>
-                            <input type="text" name="usrName" id="InputUserName">
+                            <label for="InputUserName">Estado</label>
+                            <select name="dropDown" class="dropDown">
+                                <option value="DIF">Distrito Federal</option>
+                                <option value="AGS">Aguascalientes</option>
+                                <option value="BCN">Baja California</option>
+                                <option value="BCS">Baja California Sur</option>
+                                <option value="CAM">Campeche</option>
+                                <option value="CHP">Chiapas</option>
+                                <option value="CHI">Chihuahua</option>
+                                <option value="COA">Coahuila</option>
+                                <option value="COL">Colima</option>
+                                <option value="DUR">Durango</option>
+                                <option value="GTO">Guanajuato</option>
+                                <option value="GRO">Guerrero</option>
+                                <option value="HGO">Hidalgo</option>
+                                <option value="JAL">Jalisco</option>
+                                <option value="MEX">M&eacute;xico</option>
+                                <option value="MIC">Michoac&aacute;n</option>
+                                <option value="MOR">Morelos</option>
+                                <option value="NAY">Nayarit</option>
+                                <option value="NLE">Nuevo Le&oacute;n</option>
+                                <option value="OAX">Oaxaca</option>
+                                <option value="PUE">Puebla</option>
+                                <option value="QRO">Quer&eacute;taro</option>
+                                <option value="ROO">Quintana Roo</option>
+                                <option value="SLP">San Luis Potos&iacute;</option>
+                                <option value="SIN">Sinaloa</option>
+                                <option value="SON">Sonora</option>
+                                <option value="TAB">Tabasco</option>
+                                <option value="TAM">Tamaulipas</option>
+                                <option value="TLX">Tlaxcala</option>
+                                <option value="VER">Veracruz</option>
+                                <option value="YUC">Yucat&aacute;n</option>
+                                <option value="ZAC">Zacatecas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <label for="InputUserName">Estado</label>
+                            <select name="dropDown" class="dropDown">
+                                <option value="DIF">Álvaro Obregón</option>
+                                <option value="DIF">Azcapotzalco</option>
+                                <option value="DIF">Benito Juárez</option>
+                                <option value="DIF">Coyoacán</option>
+                                <option value="DIF">Cuajimalpa de Morelos</option>
+                                <option value="DIF">Cuauhtémoc</option>
+                                <option value="DIF">Gustavo A. Madero</option>
+                                <option value="DIF">Iztacalco</option>
+                                <option value="DIF">Iztapalapa</option>
+                                <option value="DIF">Magdalena Contreras</option>
+                                <option value="DIF">Miguel Hidalgo</option>
+                                <option value="DIF">Milpa Alta</option>
+                                <option value="DIF">Tlalpan</option>
+                                <option value="DIF">Venustiano Carranza</option>
+                                <option value="DIF">Xochimilco</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <label for="InputUserName">No. de hectáreas</label>
+                            <select name="dropDown" class="dropDown">
+                                <option value="val">De 1-5 hectáreas</option>
+                                <option value="val">De 6-19 hectáreas</option>
+                                <option value="val">Mas de 20 hectáreas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <label for="InputUserName">Tipo de cultivo</label>
+
+                                <div class="row">
+                                    <input type="checkbox" id="Fresas">
+                                    <label class="space" for="RecieveInfoCB">Fresas</label>
+                                    <input type="checkbox" id="Arándanos">
+                                    <label class="space" for="RecieveInfoCB">Arándanos</label>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Moras">
+                                    <label class="space" for="RecieveInfoCB">Moras</label>
+                                    <input type="checkbox" id="Frambuesas">
+                                    <label class="space" for="RecieveInfoCB">Frambuesas</label>
+                                </div>
+                                <div class="row">
+                                    <input type="checkbox" id="Otros">
+                                    <label class="space" for="RecieveInfoCB">Otros</label>
+                                </div>
                         </div>
                     </div>
                     <div id="ReceiveInfoCheckbox">
                         <input type="checkbox" id="RecieveInfoCB">
-                        <label for="RecieveInfoCB">Deseo recibir más información acerca de las soluciones tecnológicas para cultivos de berries.</label>
+                        <label for="RecieveInfoCB">He leído y acepto condiciones de servicio y políticas de privacidad</label>
                     </div>
-                    <button type="submit" class="main-button">Enviar</button>
+                    <button type="submit" class="main-button">Registrate</button>
                 </form>
             </div>
         </section>
-        
+
         <section id="MainSlogan" class="fll-bg" style="background-image: url(images/banner_contacto.jpg);">
             <div class="container">
                 <div class="info-cont">
                     <h2>Al cuidar con la mejor tecnología los cultivos de berries
                     </h2>
                     <p>le das la oportunidad a más personas
-                        de alimentarse con frutos nutritivos, 
+                        de alimentarse con frutos nutritivos,
                         bajos en calorías y altos en fibra.
                         </p>
                 </div>
