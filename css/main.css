@@ -196,6 +196,7 @@ section#MainSlogan .container .info-cont p{
     padding: 20px;
     display: inline-block;
     text-align: center;
+    cursor: pointer;
 }
 .fll-bg{
     background: no-repeat center center;
@@ -842,6 +843,12 @@ footer #FooterLegal a:last-child{
 #CertificacionContainer section#IntroSection{
     padding: 100px 0;
 }
+#CertificacionContainer #IntroSection .container h1{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 80px;
+}
 #CertificacionContainer section#IntroSection h2{
     font-size: 3rem;
     text-align: center;
@@ -873,7 +880,16 @@ footer #FooterLegal a:last-child{
     font-size: 2rem;
     font-weight: normal;
 }
-
+#CertificacionContainer section#StepcsCert .container .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#CertificacionContainer section#StepcsCert .container .center .main-button{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
 
 
 
@@ -944,20 +960,21 @@ footer #FooterLegal a:last-child{
 }
 #ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox{
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     color: black;
     margin: 50px auto;
 }
 #ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox label{
-    font-size: 1rem;
+    font-size: 2rem;
 }
 #ContactoContainer section#ContactFormSection .container #ContactForm button.main-button{
     display: block;
     margin: 0 auto;
     width: 100%;
     max-width: 200px;
+    cursor: pointer;
 }
 
 @media(max-width: 600px){
@@ -979,4 +996,25 @@ footer #FooterLegal a:last-child{
     #ContactoContainer section#ContactFormSection .container .row .item input[type="text"]{
         font-size: 1rem;
     }
+}
+#Table .container{
+    padding: 20px;
+}
+#Table .container .row{
+    display: flex;
+    justify-content: center;
+}
+#Table .container .row .table {
+    width: 50%;
+    height: 100%;
+    border: 2px solid gray;
+}
+
+#Table .container .row .table h1{
+    padding: 20px;
+    font-size: 2em;
+}
+#Table .container .row .main-button{
+    margin-top: 40px;
+    cursor: pointer;
 }
