@@ -856,7 +856,7 @@ footer #FooterLegal a:last-child{
 
  /* ************************ Certificacion Section ********************** */
 
- #CertificacionContainer section#DatesListContent{
+#CertificacionContainer section#DatesListContent{
     padding-bottom: 50px;
 }
 #CertificacionContainer section#MainBanner .container{
@@ -914,133 +914,6 @@ footer #FooterLegal a:last-child{
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-/* #ContactoContainer */
-
-#ContactoContainer{
-    padding-top: 200px;
-}
-#ContactoContainer section#ContactFormSection .container h2{
-    text-align: center;
-    font-size: 3rem;
-    color: #f63f57;
-}
-#ContactoContainer section#ContactFormSection .container p{
-    text-align: center;
-    font-size: 2rem;
-    padding:30px 0
-}
-#ContactoContainer section#ContactFormSection .container #ContactForm{
-    padding: 100px 0;
-}
-#ContactoContainer section#ContactFormSection .container .row{
-    display: flex;
-}
-#ContactoContainer section#ContactFormSection .container .row .item:first-child{
-    padding-right: 20px;
-}
-#ContactoContainer section#ContactFormSection .container .row .item:last-child{
-    padding-left: 20px;
-}
-#ContactoContainer section#ContactFormSection .container .row .item{
-    width: 50%;
-    padding: 50px 0;
-}
-#ContactoContainer section#ContactFormSection .container .row .item label{
-    display: block;
-    font-size: 2rem;
-    padding-bottom: 10px;
-    color: gray;
-}
-#ContactoContainer section#ContactFormSection .container .row .item input[type="text"], input[type="email"], input[type="tel"]{
-    display: block;
-    padding: 15px;
-    font-size: 2rem;
-    width: 100%;
-    background-color: rgb(243, 243, 243);
-    border-bottom: 2px solid gray;
-}
-#ContactoContainer section#ContactFormSection .container .row .item .row .space{
-    margin-right: 50px;
-    margin-left: 10px;
-    color: black;
-}
-#ContactoContainer section#ContactFormSection .container .row .item .dropDown{
-    display: block;
-    padding: 15px;
-    font-size: 2rem;
-    width: 100%;
-    background-color: rgb(243, 243, 243);
-    border-bottom: 2px solid gray;
-}
-/*---------- ---------- ----------
-    TypeCheckbox
----------- ---------- ----------*/
-#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox{
-    width: 100%;
-    font-size: 2rem;
-}
-#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox .checkbox__title{
-    color: gray;
-}
-#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox .checkbox__row{
-    padding: .5em 1em;
-}
-#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox .checkbox__row .checkbox__item{
-    margin-right: 10PX;
-    color: black;
-}
-
-
-
-
-
-#ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox{
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    color: black;
-    margin: 50px auto;
-}
-#ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox label{
-    font-size: 2rem;
-}
-#ContactoContainer section#ContactFormSection .container #ContactForm button.main-button{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 200px;
-    cursor: pointer;
-}
-
-@media(max-width: 600px){
-    #ContactoContainer section#ContactFormSection .container #ContactForm{
-        padding: 0 0 100px 0;
-    }
-    #ContactoContainer section#ContactFormSection .container .row{
-        display: block;
-    }
-    #ContactoContainer section#ContactFormSection .container .row .item{
-        width: 100%;
-        padding: 10px 0 !important;
-    }
-    #ContactoContainer section#ContactFormSection .container .row .item label{
-        text-align: center;
-        padding-bottom: 5px;
-        font-size: 1.4rem;
-    }
-    #ContactoContainer section#ContactFormSection .container .row .item input[type="text"]{
-        font-size: 1rem;
-    }
-}
 #Table .container{
     padding: 20px;
 }
@@ -1061,4 +934,207 @@ footer #FooterLegal a:last-child{
 #Table .container .row .main-button{
     margin-top: 40px;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------- ---------- ---------- ---------- ---------- ----------
+    Contacto Section
+---------- ---------- ---------- ---------- ---------- ----------*/
+
+#ContactoContainer{
+    padding-top: 200px;
+}
+#ContactoContainer section#ContactFormSection .container h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #f63f57;
+}
+.container__p{
+    text-align: center;
+    font-size: 2rem;
+    padding:30px 0;
+}
+
+/*---------- ---------- ----------
+    Formulario - input
+---------- ---------- ----------*/
+.formulario {
+    padding: 60px 0;
+}
+.formulario__row{
+    display: flex;
+}
+.formulario__row .formulario__grupo:first-child{
+    padding-right: 20px;
+}
+.formulario__row .formulario__grupo:last-child{
+    padding-left: 20px;
+}
+.formulario__row .formulario__grupo{
+    width: 50%;
+    padding: 25px 0;
+}
+.formulario__row .formulario__grupo label{
+    display: block;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color: gray;
+}
+.formulario__grupo-input {
+    position: relative;
+}
+.formulario__input {
+	width: 100%;
+	height: 45px;
+    padding: 0 40px 0 10px;
+    background-color: rgb(243, 243, 243);
+    border-bottom: 2px solid gray;
+    font-size: 1.5em;
+}
+.formulario__input:focus {
+	border-bottom: 2px solid #0075FF;
+	outline: none
+}
+.formulario__input-error {
+	font-size: 10px;
+	margin-bottom: 0;
+    display: none;
+    padding: 5px;
+    font-size: 1.5em;
+}
+.formulario__input-error-activo {
+    display: block;
+}
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+    opacity: 0;
+}
+
+/*---------- ---------- ----------
+    TypeCheckbox
+---------- ---------- ----------*/
+.checkbox{
+    width: 100%;
+    font-size: 2rem;
+}
+.checkbox__title{
+    color: gray;
+}
+.checkbox__row{
+    padding: .5em 1em;
+}
+.checkbox__item{
+    margin-right: 10PX;
+    color: black;
+}
+
+/*---------- ---------- ----------
+    terminos
+---------- ---------- ----------*/
+#grupo__terminos{
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    color: black;
+    margin: 50px auto;
+}
+.formulario__label, .formulario__checkbox{
+    font-size: 2rem;
+}
+
+/*---------- ---------- ----------
+    color
+---------- ---------- ----------*/
+.formulario__grupo-terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+.formulario__mensaje-activo {
+	display: block;
+}
+.formulario__mensaje p {
+	margin: 0;
+}
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #24ca32;
+	display: none;
+}
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/*---------- ---------- ----------
+    validacion
+---------- ---------- ----------*/
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #24ca32;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #f63f57;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #f63f57;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border-bottom: 2px solid #f63f57;
+}
+
+
+/*---------- ---------- ----------
+    media
+---------- ---------- ----------*/
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+	.formulario__grupo-terminos,
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+}
+
+@media(max-width: 600px){
+    .formulario__row{
+        display: block;
+        font-size: 1.2em;
+    }
+    .formulario__row .formulario__grupo{
+        width: 100%;
+        padding: 10px 0 !important;
+    }
+    .formulario__row .formulario__grupo .formulario__label{
+        padding-bottom: 5px;
+        font-size: 1.4em;
+    }
 }

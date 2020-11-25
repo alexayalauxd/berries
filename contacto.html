@@ -34,113 +34,147 @@
             </ul>
         </header>
 
-
         <section id="ContactFormSection">
             <div class="container">
                 <h2>Contacto</h2>
-                <p>Amigo técnico, ¿quieres saber más acerca de cómo nuestras soluciones tecnológicas te pueden ayudar 
+                <p class="container__p">Amigo técnico, ¿quieres saber más acerca de cómo nuestras soluciones tecnológicas te pueden ayudar 
                     a proteger y maximizar los cultivos? Completa tus datos y te contactaremos a la brevedad.
                 </p>
-                <form id="ContactForm">
-                    <div class="row">
-                        <div class="item">
-                            <label for="InputUserName">*Nombre</label>
-                            <input type="text" name="usrName" id="InputUserName">
+
+                <form action="" class="formulario" id="formulario">
+
+                    <div class="formulario__row">
+                        <!-- Grupo: name -->
+                        <div class="formulario__grupo" id="grupo__name">
+                            <label for="name" class="formulario__label">*Nombre</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="name" id="name" placeholder="Name">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El nombre solo puede contener letras.</p>
                         </div>
-                        <div class="item">
-                            <label for="InputUserName">*Apellidos</label>
-                            <input type="text" name="usrName" id="InputUserLastName">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="item">
-                            <label for="InputUserName">*Mail</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="item">
-                            <label for="InputUserName">*Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="item">
-                            <label for="InputUserName">Ocupación</label>
-                            <select name="dropDown" class="dropDown">
-                                <option value="val">Ocupación</option>
-                                <option value="val">Productor</option>
-                                <option value="val">Otro</option>
-                            </select>
-                        </div>
-                        <div class="item">
-                            <label for="InputUserName">Estado</label>
-                            <select name="dropDown" class="dropDown">
-                                <option value="DIF">Distrito Federal</option>
-                                <option value="AGS">Aguascalientes</option>
-                                <option value="BCN">Baja California</option>
-                                <option value="BCS">Baja California Sur</option>
-                                <option value="CAM">Campeche</option>
-                                <option value="CHP">Chiapas</option>
-                                <option value="CHI">Chihuahua</option>
-                                <option value="COA">Coahuila</option>
-                                <option value="COL">Colima</option>
-                                <option value="DUR">Durango</option>
-                                <option value="GTO">Guanajuato</option>
-                                <option value="GRO">Guerrero</option>
-                                <option value="HGO">Hidalgo</option>
-                                <option value="JAL">Jalisco</option>
-                                <option value="MEX">M&eacute;xico</option>
-                                <option value="MIC">Michoac&aacute;n</option>
-                                <option value="MOR">Morelos</option>
-                                <option value="NAY">Nayarit</option>
-                                <option value="NLE">Nuevo Le&oacute;n</option>
-                                <option value="OAX">Oaxaca</option>
-                                <option value="PUE">Puebla</option>
-                                <option value="QRO">Quer&eacute;taro</option>
-                                <option value="ROO">Quintana Roo</option>
-                                <option value="SLP">San Luis Potos&iacute;</option>
-                                <option value="SIN">Sinaloa</option>
-                                <option value="SON">Sonora</option>
-                                <option value="TAB">Tabasco</option>
-                                <option value="TAM">Tamaulipas</option>
-                                <option value="TLX">Tlaxcala</option>
-                                <option value="VER">Veracruz</option>
-                                <option value="YUC">Yucat&aacute;n</option>
-                                <option value="ZAC">Zacatecas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="item">
-                            <label for="InputUserName">Estado</label>
-                            <select name="dropDown" class="dropDown">
-                                <option value="DIF">Álvaro Obregón</option>
-                                <option value="DIF">Azcapotzalco</option>
-                                <option value="DIF">Benito Juárez</option>
-                                <option value="DIF">Coyoacán</option>
-                                <option value="DIF">Cuajimalpa de Morelos</option>
-                                <option value="DIF">Cuauhtémoc</option>
-                                <option value="DIF">Gustavo A. Madero</option>
-                                <option value="DIF">Iztacalco</option>
-                                <option value="DIF">Iztapalapa</option>
-                                <option value="DIF">Magdalena Contreras</option>
-                                <option value="DIF">Miguel Hidalgo</option>
-                                <option value="DIF">Milpa Alta</option>
-                                <option value="DIF">Tlalpan</option>
-                                <option value="DIF">Venustiano Carranza</option>
-                                <option value="DIF">Xochimilco</option>
-                            </select>
-                        </div>
-                        <div class="item">
-                            <label for="InputUserName">No. de hectáreas</label>
-                            <select name="dropDown" class="dropDown">
-                                <option value="val">De 1-5 hectáreas</option>
-                                <option value="val">De 6-19 hectáreas</option>
-                                <option value="val">Mas de 20 hectáreas</option>
-                            </select>
+
+                        <!-- Grupo: lastname -->
+                        <div class="formulario__grupo" id="grupo__lastname">
+                            <label for="lastname" class="formulario__label">*Apellidos</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="lastname" id="lastname" placeholder="Last Name">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">el apellido solopuede contener letras</p>
                         </div>
                     </div>
 
-                    <div id="TypeCheckbox">
+                    <div class="formulario__row">
+                        <!-- Grupo: email -->
+                        <div class="formulario__grupo" id="grupo__email">
+                            <label for="email" class="formulario__label">*Mail</label>
+                            <div class="formulario__grupo-input">
+                                <input type="email" class="formulario__input" name="email" id="email" placeholder="Email@mail.com">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                        </div>
+        
+                        <!-- Grupo: phone -->
+                        <div class="formulario__grupo" id="grupo__phone">
+                            <label for="phone" class="formulario__label">Teléfono</label>
+                            <div class="formulario__grupo-input">
+                                <input type="tel" class="formulario__input" name="phone" id="phone" placeholder="5512345678">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El teléfono solo puede contener numeros y el maximo son 10 dígitos.</p>
+                        </div>
+                    </div>
+
+                    <div class="formulario__row">
+                        <div class="formulario__grupo">
+                            <label class="formulario__label" for="InputUserName">Ocupación</label>
+                            <div class="formulario__grupo-input">
+                                <select class="formulario__input" name="dropDown">
+                                    <option value="val">Ocupación</option>
+                                    <option value="val">Productor</option>
+                                    <option value="val">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formulario__grupo">
+                            <label class="formulario__label" for="InputUserName">Estado</label>
+                            <div class="formulario__grupo-input">
+                                <select class="formulario__input" name="dropDown">
+                                    <option value="DIF">Distrito Federal</option>
+                                    <option value="AGS">Aguascalientes</option>
+                                    <option value="BCN">Baja California</option>
+                                    <option value="BCS">Baja California Sur</option>
+                                    <option value="CAM">Campeche</option>
+                                    <option value="CHP">Chiapas</option>
+                                    <option value="CHI">Chihuahua</option>
+                                    <option value="COA">Coahuila</option>
+                                    <option value="COL">Colima</option>
+                                    <option value="DUR">Durango</option>
+                                    <option value="GTO">Guanajuato</option>
+                                    <option value="GRO">Guerrero</option>
+                                    <option value="HGO">Hidalgo</option>
+                                    <option value="JAL">Jalisco</option>
+                                    <option value="MEX">M&eacute;xico</option>
+                                    <option value="MIC">Michoac&aacute;n</option>
+                                    <option value="MOR">Morelos</option>
+                                    <option value="NAY">Nayarit</option>
+                                    <option value="NLE">Nuevo Le&oacute;n</option>
+                                    <option value="OAX">Oaxaca</option>
+                                    <option value="PUE">Puebla</option>
+                                    <option value="QRO">Quer&eacute;taro</option>
+                                    <option value="ROO">Quintana Roo</option>
+                                    <option value="SLP">San Luis Potos&iacute;</option>
+                                    <option value="SIN">Sinaloa</option>
+                                    <option value="SON">Sonora</option>
+                                    <option value="TAB">Tabasco</option>
+                                    <option value="TAM">Tamaulipas</option>
+                                    <option value="TLX">Tlaxcala</option>
+                                    <option value="VER">Veracruz</option>
+                                    <option value="YUC">Yucat&aacute;n</option>
+                                    <option value="ZAC">Zacatecas</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formulario__row">
+                        <div class="formulario__grupo">
+                            <label class="formulario__label" for="InputUserName">Estado</label>
+                            <div class="formulario__grupo-input">
+                                <select class="formulario__input" name="dropDown">
+                                    <option value="DIF">Álvaro Obregón</option>
+                                    <option value="DIF">Azcapotzalco</option>
+                                    <option value="DIF">Benito Juárez</option>
+                                    <option value="DIF">Coyoacán</option>
+                                    <option value="DIF">Cuajimalpa de Morelos</option>
+                                    <option value="DIF">Cuauhtémoc</option>
+                                    <option value="DIF">Gustavo A. Madero</option>
+                                    <option value="DIF">Iztacalco</option>
+                                    <option value="DIF">Iztapalapa</option>
+                                    <option value="DIF">Magdalena Contreras</option>
+                                    <option value="DIF">Miguel Hidalgo</option>
+                                    <option value="DIF">Milpa Alta</option>
+                                    <option value="DIF">Tlalpan</option>
+                                    <option value="DIF">Venustiano Carranza</option>
+                                    <option value="DIF">Xochimilco</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formulario__grupo">
+                            <label class="formulario__label" for="InputUserName">No. de hectáreas</label>
+                            <div class="formulario__grupo-input">
+                                <select class="formulario__input" name="dropDown">
+                                    <option value="val">De 1-5 hectáreas</option>
+                                    <option value="val">De 6-19 hectáreas</option>
+                                    <option value="val">Mas de 20 hectáreas</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
                         <label class="checkbox__title">Tipo de cultivo</label>
                         <div class="checkbox__row">
                             <span class="checkbox__item">
@@ -172,11 +206,36 @@
                         </div>
                     </div>
 
-                    <div id="ReceiveInfoCheckbox">
-                        <input type="checkbox" id="RecieveInfoCB">
-                        <label for="RecieveInfoCB">He leído y acepto condiciones de servicio y políticas de privacidad</label>
+                    <!-- Grupo: Terminos y Condiciones -->
+                    <div class="formulario__grupo" id="grupo__terminos">
+                        <label class="formulario__label">
+                            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                            He leído y acepto condiciones de servicio y políticas de privacidad
+                        </label>
                     </div>
-                    <a href="./contacto.html"><button type="submit" class="main-button">Registrate</button></a>
+    
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    </div>
+    
+                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                        <button type="submit" class="main-button">Enviar</button>
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                    </div>
+                </form>
+
+
+
+
+
+
+
+
+                <form id="ContactForm">
+
+
+
+
                 </form>
             </div>
         </section>
@@ -247,5 +306,7 @@
             </div>
         </footer>
     </div>
+    <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
