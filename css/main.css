@@ -979,12 +979,33 @@ footer #FooterLegal a:last-child{
     font-size: 2rem;
     width: 100%;
     background-color: rgb(243, 243, 243);
-    border: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
+/*---------- ---------- ----------
+    TypeCheckbox
+---------- ---------- ----------*/
+#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox{
+    width: 100%;
+    font-size: 2rem;
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox .checkbox__title{
+    color: gray;
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox .checkbox__row{
+    padding: .5em 1em;
+}
+#ContactoContainer section#ContactFormSection .container #ContactForm #TypeCheckbox .checkbox__row .checkbox__item{
+    margin-right: 10PX;
+    color: black;
+}
+
+
+
+
+
 #ContactoContainer section#ContactFormSection .container #ContactForm #ReceiveInfoCheckbox{
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
     text-align: center;
     color: black;
     margin: 50px auto;
