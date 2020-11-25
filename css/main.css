@@ -459,7 +459,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     height: 50px;
 }
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
-    height: 130px;
+    height: 140px;
 }
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item{
     display: flex;
@@ -503,18 +503,31 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.img70{
     width: 70%;
 }
+@media (min-width: 769px){
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        height: 220px;
+    }
+}
+@media (min-width: 900px){
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        height: 190px;
+    }
+}
+@media (min-width: 1024px){
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        height: 140px;
+    }
+}
 @media (max-width: 768px){
     #HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
         padding: 10px;
         width: 50%;
     }
 }
-@media (max-width: 425px){
+@media(max-width: 600px){
     #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item{
         justify-content: center;
     }
-}
-@media(max-width: 600px){
     #HomeMainContainer section#MainItems div#MainItemsTitles h3{
         font-size: 2rem;
     }
