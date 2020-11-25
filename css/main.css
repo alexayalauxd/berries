@@ -503,6 +503,17 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.img70{
     width: 70%;
 }
+@media (max-width: 768px){
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
+        padding: 10px;
+        width: 50%;
+    }
+}
+@media (max-width: 425px){
+    #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item{
+        justify-content: center;
+    }
+}
 @media(max-width: 600px){
     #HomeMainContainer section#MainItems div#MainItemsTitles h3{
         font-size: 2rem;
