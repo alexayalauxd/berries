@@ -1004,11 +1004,10 @@ footer #FooterLegal a:last-child{
 	outline: none
 }
 .formulario__input-error {
-	font-size: 10px;
 	margin-bottom: 0;
     display: none;
     padding: 5px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .formulario__input-error-activo {
     display: block;
