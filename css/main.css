@@ -1,6 +1,13 @@
 /* Main Syngenta Blue Color #004796 */
 /* Main Syngenta Pink Color #f63f57 */
 
+:root {
+    --greenDark: #62801e;
+    --greenBtn: #acc334;
+    --black: #000000;
+    --white: #ffffff;
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -26,22 +33,33 @@ h1, h2, h3, h4, h5, p{
     margin: 0;
 }
 
+/*---------- ---------- ----------
+    MainBanner
+---------- ---------- ----------*/
+
 section#MainBanner{
     height: 800px;
     background-color: rgb(235, 235, 235);
 }
 section#MainBanner .slider-infocont{
     position: absolute;
-    width: 60%;
-    bottom: 30%;
+    width: 50%;
+    bottom: 20%;
+    text-align: center;
+}
+section#MainBanner .slider-infocont img{
+    width: 40%;
 }
 section#MainBanner .slider-infocont h2{
     font-size: 4rem;
-    color: #004796;
+    color: var(--greenDark);
 }
 section#MainBanner .slider-infocont p{
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-bottom: 50px;
+}
+section#MainBanner .slider-infocont p span{
+    color: var(--greenDark);
 }
 section#MainBanner .slider-infocont a{
     min-width: 300px;
@@ -83,7 +101,7 @@ section#MainBanner .slider-infocont a{
 
 section#MainCTA{
     padding:80px 0;
-    background-color: #f63f57;
+    background-color: var(--greenDark);
 }
 section#MainCTA .container{
     display: flex;
@@ -98,14 +116,13 @@ section#MainCTA .container .info-cont h3{
 }
 section#MainCTA .container .info-cont p{
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 section#MainCTA .container .info-cont a{
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 20px 40px;
-    color: #f63f57;
-    border: 4px solid #f63f57;
-    background-color: #fff;
+    color: var(--white);
+    background-color: var(--greenBtn);
     display: block;
     text-align: center;
     width: 300px;
@@ -146,16 +163,15 @@ section#MainSlogan{
     padding: 200px 0;
 }
 section#MainSlogan .container .info-cont{
-    width: 50%;
+    width: 60%;
     padding:0 50px;
 }
 section#MainSlogan .container .info-cont h2{
-    color: white;
+    color: var(--greenDark);
     font-size: 3rem;
     padding-bottom: 50px;
 }
 section#MainSlogan .container .info-cont p{
-    color: white;
     font-size: 2rem;
 }
 @media(max-width: 600px){
@@ -190,13 +206,15 @@ section#MainSlogan .container .info-cont p{
 .txt-pink{ color: #f63f57 !important; }
 
 .main-button{
-    background-color: #f63f57;
+    background-color: var(--greenDark);
     color: white;
     font-size: 2rem;
-    padding: 20px;
+    padding: 30px 50px;
     display: inline-block;
     text-align: center;
     cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
 }
 .fll-bg{
     background: no-repeat center center;
@@ -429,7 +447,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     padding: 0 0 100px 0;
 }
 #HomeMainContainer section#MainItems div#MainItemsTitles h3{
-    color: #f63f57;
+    color: var(--greenDark);
     font-weight: bold;
     text-align: center;
     font-size: 4rem;
@@ -466,7 +484,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     padding: 20px 0;
 }
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item a{
-    color: #f63f57;
+    color: var(--greenBtn);
     text-decoration: underline;
     position: relative;
     padding-top: 10px;
@@ -882,6 +900,9 @@ footer #FooterLegal a:last-child{
     font-weight: bold;
     text-decoration: underline;
 }
+#CertificacionContainer section#StepcsCert .container{
+    margin-top: 100px;
+}
 #CertificacionContainer section#StepcsCert .container .item-step{
     position: relative;
     padding-bottom: 50px;
@@ -892,11 +913,16 @@ footer #FooterLegal a:last-child{
     left: 0;
     top: -10px;
     font-size: 9rem;
-    color: #f63f57;
+    color: var(--greenDark);
     font-weight: bold;
 }
+#CertificacionContainer section#StepcsCert .container .item-step h2{
+    font-size: 4rem;
+    color: var(--greenDark);
+    text-align: center;
+}
 #CertificacionContainer section#StepcsCert .container .item-step h3 a{
-    color: #f63f57;
+    color: var(--greenDark);
 }
 #CertificacionContainer section#StepcsCert .container .item-step h3{
     padding-left: 150px;
@@ -948,19 +974,127 @@ footer #FooterLegal a:last-child{
 /*---------- ---------- ---------- ---------- ---------- ----------
     Contacto Section
 ---------- ---------- ---------- ---------- ---------- ----------*/
-
-#ContactoContainer{
-    padding-top: 200px;
-}
 #ContactoContainer section#ContactFormSection .container h2{
     text-align: center;
     font-size: 3rem;
-    color: #f63f57;
+    color: var(--greenDark);
 }
 .container__p{
     text-align: center;
     font-size: 2rem;
     padding:30px 0;
+}
+
+/*---------- ---------- ----------
+    Contacto Icon
+---------- ---------- ----------*/
+#ContactoContainer section#MainItems{
+    padding: 40px;
+    padding:10px 0;
+}
+#ContactoContainer section#MainItems div#MainItemsTitles{
+    padding: 50px 100px;
+}
+#ContactoContainer section#MainItems div#MainItemsTitles h2{
+    color: var(--greenDark);
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+#ContactoContainer section#MainItems div#ItemsCont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech{
+    padding: 10px 30px 70px 30px;
+    width: 33.33%;
+}
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info{
+    width: 100%;
+    min-height: 300px;
+}
+
+
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+    font-size: 1.5em;
+    text-align: center
+}
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img{
+    display: block;
+    /* padding-bottom: 20px; */
+    text-align: center;
+}
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img img{
+    width: 50%;
+}
+
+
+
+
+/* #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.h80{
+    height: 120px;
+    border: teal 1px solid;
+}
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img.img50{
+    text-align: center;
+}
+#ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img img{
+    width: 50%;
+} */
+
+
+
+
+@media (min-width: 769px){
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        height: 220px;
+    }
+}
+@media (min-width: 900px){
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        height: 190px;
+    }
+}
+@media (min-width: 1024px){
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        height: 140px;
+    }
+}
+@media (max-width: 768px){
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech{
+        padding: 10px;
+        width: 50%;
+    }
+}
+@media(max-width: 600px){
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .actions-item{
+        justify-content: center;
+    }
+    #ContactoContainer section#MainItems div#MainItemsTitles h3{
+        font-size: 2rem;
+    }
+    #ContactoContainer section#MainItems div#MainItemsTitles p{
+        font-size: 1rem;
+    }
+    #ContactoContainer section#MainItems div#ItemsCont{
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech{
+        padding: 0 0 50px 0;
+        margin: 0 0 50px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img{
+        margin: 0 auto;
+    }
 }
 
 /*---------- ---------- ----------
