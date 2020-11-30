@@ -470,7 +470,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     width: 100%;
 }
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
-    padding: 10px 30px 70px 30px;
+    padding: 10px 30px 70px 17px;
     width: 33.33%;
 }
 #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info{
