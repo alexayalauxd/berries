@@ -66,25 +66,31 @@ section#MainBanner .slider-infocont a{
 }
 @media(max-width: 600px){
     section#MainBanner{
-        height: 350px;
+        height: 500px;
     }
     section#MainBanner .slider-infocont{
         width: 100% !important;
-        bottom: 20% !important;
+        bottom: 0% !important;
         left: 0 !important;
-        padding: 0 20px !important;
+        height: 100%;
+        padding: 150px 20px 0 20px !important;
         text-align: center !important;
+        box-sizing: border-box;
+        background-color: rgba(0,0,0,0.5);
     }
     section#MainBanner .slider-infocont h2{
         font-size: 2rem;
+        color: white !important;
     }
     section#MainBanner .slider-infocont p{
         font-size: 1.5rem;
         padding-bottom: 20px;
+        color: white;
     }
     section#MainBanner .slider-infocont a{
         font-size: 1rem;
         min-width: inherit;
+        padding: 16px 52px;
     }
 }
 
@@ -121,6 +127,7 @@ section#MainCTA .container .info-cont p{
 section#MainCTA .container .info-cont a{
     border-radius: 25px;
     padding: 20px 40px;
+    border: 4px solid #acc334;
     color: var(--white);
     background-color: var(--greenBtn);
     display: block;
@@ -131,7 +138,7 @@ section#MainCTA .container .info-cont a{
     font-weight: bold;
 }
 section#MainCTA .container .info-cont a:hover{
-    border: 4px solid #ff8999;
+    border: 4px solid #cbd695;
     text-decoration: underline;
 }
 @media(max-width: 600px){
@@ -940,6 +947,32 @@ footer #FooterLegal a:last-child{
     cursor: pointer;
 }
 
+@media(max-width: 600px){
+    #CertificacionContainer section#MainBanner .slider-infocont{
+        padding: 250px 20px 0 20px !important;
+        background-color:rgba(0,0,0,0.8);
+    }
+    #CertificacionContainer section#MainBanner .slider-infocont p span{
+        color: #acc334 !important;
+    }
+    #CertificacionContainer section#StepcsCert .container .item-step{
+        border-bottom: 1px solid gray;
+        padding:45px 0;
+        min-height: inherit;
+    }
+    #CertificacionContainer section#StepcsCert .container .item-step p{
+        font-size: 6rem;
+        top: 30px;
+    }
+    #CertificacionContainer section#StepcsCert .container .item-step h2{
+        font-size: 2rem;
+    }
+    #CertificacionContainer section#StepcsCert .container .item-step h3{
+        padding-left: 63px;
+        font-size: 16px;
+    }
+}
+
 #Table .container{
     padding: 20px;
 }
@@ -979,6 +1012,18 @@ footer #FooterLegal a:last-child{
     font-size: 3rem;
     color: var(--greenDark);
 }
+
+#ContactoContainer  section#MainBanner{
+    height: 700px;
+}
+
+@media(max-width: 600px){
+    #ContactoContainer  section#MainBanner{
+        height: 376px;
+        margin-top: 50px;
+    }
+}
+
 .container__p{
     text-align: center;
     font-size: 2rem;
@@ -995,6 +1040,37 @@ footer #FooterLegal a:last-child{
 #ContactoContainer section#MainItems div#MainItemsTitles{
     padding: 50px 100px;
 }
+#ContactoContainer section#MainItems.thanks-message div#MainItemsTitles{
+    text-align: center;
+}
+#ContactoContainer section#MainItems.thanks-message div#MainItemsTitles h2{
+    font-size: 4em;
+}
+#ContactoContainer section#MainItems.thanks-message div#MainItemsTitles h3{
+    font-size: 3em;
+    margin: 1em 0;
+}
+#ContactoContainer section#MainItems.thanks-message div#MainItemsTitles a{
+    border-radius: 25px;
+    padding: 20px ;
+    border: 4px solid #acc334;
+    color: var(--white);
+    background-color: var(--greenBtn);
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 5% auto;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#ContactoContainer section#MainItems.thanks-message div#MainItemsTitles p{
+    padding: 10px 0;
+    font-size: 2em;
+    color: rgb(66, 66, 66);
+}
+#ContactoContainer section#MainItems.thanks-message div#MainItemsTitles p b{
+    color: #acc334;
+}
 #ContactoContainer section#MainItems div#MainItemsTitles h2{
     color: var(--greenDark);
     font-weight: bold;
@@ -1009,7 +1085,7 @@ footer #FooterLegal a:last-child{
     width: 100%;
 }
 #ContactoContainer section#MainItems div#ItemsCont div.item-tech{
-    padding: 10px 30px 70px 30px;
+    padding: 10px 30px;
     width: 33.33%;
 }
 #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info{
@@ -1066,7 +1142,7 @@ footer #FooterLegal a:last-child{
 @media (max-width: 768px){
     #ContactoContainer section#MainItems div#ItemsCont div.item-tech{
         padding: 10px;
-        width: 50%;
+        width: 33%;
     }
 }
 @media(max-width: 600px){
@@ -1082,18 +1158,29 @@ footer #FooterLegal a:last-child{
     #ContactoContainer section#MainItems div#ItemsCont{
         padding: 0;
         margin: 0;
-        display: block;
     }
     #ContactoContainer section#MainItems div#ItemsCont div.item-tech{
         padding: 0 0 50px 0;
         margin: 0 0 50px 0;
         display: block;
-        width: 100%;
+        width: 33%;
         text-align: center;
         border-bottom: 1px solid rgb(221, 221, 221);
     }
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info{
+        min-height: inherit;
+    }
     #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img{
         margin: 0 auto;
+    }
+    #ContactoContainer section#MainItems div#ItemsCont div.item-tech div.item-info p.desc-txt{
+        font-size: 12px;
+    }
+    #ContactoContainer section#MainItems div#MainItemsTitles{
+        padding: 50px 0;
+    }
+    #ContactoContainer section#MainItems div#MainItemsTitles h2{
+        font-size: 24px;
     }
 }
 
@@ -1116,6 +1203,9 @@ footer #FooterLegal a:last-child{
     width: 50%;
     padding: 25px 0;
 }
+.formulario__row .formulario__grupo label span{
+    color: red;
+}
 .formulario__row .formulario__grupo label{
     display: block;
     font-size: 2rem;
@@ -1125,23 +1215,37 @@ footer #FooterLegal a:last-child{
 .formulario__grupo-input {
     position: relative;
 }
+
+::-webkit-input-placeholder {
+    color: rgb(151, 151, 151);
+}
+
+:-ms-input-placeholder {
+    color: rgb(151, 151, 151);
+}
+
+::placeholder {
+    color: rgb(151, 151, 151);
+}
+
 .formulario__input {
 	width: 100%;
 	height: 45px;
     padding: 0 40px 0 10px;
-    background-color: rgb(243, 243, 243);
+    background-color: none;
     border-bottom: 2px solid gray;
     font-size: 1.5em;
 }
 .formulario__input:focus {
-	border-bottom: 2px solid #0075FF;
+	border-bottom: 2px solid var(--greenDark);
 	outline: none
 }
 .formulario__input-error {
+    color: indianred;
 	margin-bottom: 0;
     display: none;
     padding: 5px;
-    font-size: 1.2em;
+    font-size: 0.6em;
 }
 .formulario__input-error-activo {
     display: block;
@@ -1194,12 +1298,13 @@ footer #FooterLegal a:last-child{
 	grid-column: span 2;
 }
 .formulario__mensaje {
-	height: 45px;
-	line-height: 45px;
-	background: #F66060;
-	padding: 0 15px;
+	background: #f5d0d0;
+	padding: 15px;
 	border-radius: 3px;
-	display: none;
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0 30px 0;
 }
 .formulario__mensaje-activo {
 	display: block;
@@ -1242,6 +1347,10 @@ footer #FooterLegal a:last-child{
 	border-bottom: 2px solid #f63f57;
 }
 
+#SendFormBtn:disabled{
+    opacity: 0.3;
+}
+
 
 /*---------- ---------- ----------
     media
@@ -1264,7 +1373,7 @@ footer #FooterLegal a:last-child{
     }
     .formulario__row .formulario__grupo{
         width: 100%;
-        padding: 10px 0 !important;
+        padding: 30px 0 !important;
     }
     .formulario__row .formulario__grupo .formulario__label{
         padding-bottom: 5px;

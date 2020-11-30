@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syngenta :: Berries MX | Técnicos</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+    <script src="js/exceljs.min.js"></script>
+    <script src="js/FileSaver.min.js"></script>
+</head>
+<body>
+    <div id="ContactoContainer" class="main-content">
+        <header>
+            <a class="logo"><img class="img" src="./images/Syngenta_MainLogo.png" alt=""></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        </header>
+
+        
+        <section id="MainItems" class="thanks-message" style="padding-top: 100px;">
+            <div id="AdminSect"></div>
+
+            <div id="WelcomeAdmin" class="container">
+                <div id="MainItemsTitles">
+                    <!-- <h2>Descargar base de datos</h2> -->
+                    <h3>Sección restringuida</h3>
+                    <form id="FormAccess" style="max-width: 600px; margin: 0 auto;">
+                        <input type="password" id="AdminPassword" maxlength="30" class="formulario__input" placeholder="password" style="text-align: center; background-color: rgb(240, 240, 240); border-radius: 5px;">
+                        <small>Ingresa tu password de acceso.</small>
+                        <p></p>
+                        <div class="formulario__mensaje" id="formulario__noaccess" style="padding: 5px;">
+                            <p style="font-size: 1em;"><i class="fas fa-exclamation-triangle"></i>&nbsp; Lo sentimos pero no cuentas con el acceso necesario.</p>
+                        </div>
+                        <button type="submit" class="main-button" style="margin: 30px 0; padding: 10px 20px; font-size: 14px;">Entrar</button>
+                    </form>
+                </div>
+            </div>
+            <div id="DownloadDataBase" class="container" style="display: none;">
+                <div id="MainItemsTitles">
+                    <h2>Descargar base de datos</h2>
+                    <h3>Sección restringuida</h3>
+                    <form id="FormDownloadDatabase" style="max-width: 600px; margin: 0 auto;">
+                        <div class="formulario__row">
+                            <!-- Grupo: email -->
+                            <div class="formulario__grupo" id="grupo__email">
+                                <label for="email" class="formulario__label"><span>*</span> Fecha de inicio</label>
+                                <div class="formulario__grupo-input">
+                                    <input id="fromData" type="date" class="formulario__input" style="text-align: center; background-color: rgb(240, 240, 240); border-radius: 5px; font-family: Arial, Helvetica, sans-serif;">
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Este campo no puede estar vacio y solo puede contener letras, números, puntos, guiones y guion bajo.</p>
+                            </div>
+            
+                            <!-- Grupo: phone -->
+                            <div class="formulario__grupo" id="grupo__phone">
+                                <label for="phone" class="formulario__label"><span>*</span> Fecha de término</label>
+                                <div class="formulario__grupo-input">
+                                    <input id="toData" type="date" class="formulario__input" style="text-align: center; background-color: rgb(240, 240, 240); border-radius: 5px; font-family: Arial, Helvetica, sans-serif;">
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Este campo no puede estar vacio y solo puede contener números y el máximo son 10 dígitos.</p>
+                            </div>
+                        </div>
+                        <div class="formulario__mensaje" id="formulario__results" style="padding: 5px; background-color: rgb(177, 233, 255);">
+                            <p style="font-size: 1em;"><i class="fas fa-exclamation-triangle"></i>&nbsp; Tu descarga comenzará en unos segundos.</p>
+                        </div>
+                        <div class="formulario__mensaje" id="formulario__noresults" style="padding: 5px;">
+                            <p style="font-size: 1em;"><i class="fas fa-exclamation-triangle"></i>&nbsp; Tu busqueda no dio resultados.</p>
+                        </div>
+                        <button type="submit" class="main-button" style="margin: 30px 0; padding: 10px 20px; font-size: 14px;">Descargar Base de Datos</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="fll-bg" style="background-image: url(images/syngenta-berries-footer.jpg);">
+            <div class="container">
+                <div class="info-cont">
+                    <h4>Síguenos</h4>
+                    <div class="sn-links">
+                        <a href="https://www.facebook.com/SyngentaMx" target="_blank">
+                            <img src="images/icon01_FB.png" alt="Syngenta | Berries | Facebook">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCNgvp3V0H40F9RJQ4DBlyng/" target="_blank">
+                            <img src="images/icon02_YT.png" alt="Syngenta | Berries | Youtube">
+                        </a>
+                        <a href="https://www.linkedin.com/company/syngenta/" target="_blank">
+                            <img src="images/icon03_IN.png" alt="Syngenta | Berries | Linkedi">
+                        </a>
+                        <a href="https://twitter.com/Syngenta" target="_blank">
+                            <img src="images/icon04_TW.png" alt="Syngenta | Berries | Twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info-cont">
+                    <h4>Syngenta México</h4>
+                    <p>CDMX<br>
+                        Avenida Insurgentes Sur ·1431, piso 12,<br>
+                        Col. Insurgentes Mixcoac, CP 03920 CDMX<br>
+                        Teléfono: 9183 3199
+                        </p>
+                </div>
+                <!-- <div class="info-cont">
+                    <h4>Seedcare Institute™ México</h4>
+                    <p>Avenida Insurgentes Sur #1431, piso 12<br/>
+                        Col. Insurgentes Mixcoac CP. 03920 Guadalajara, Jal.<br/>
+                        Teléfono: 9183 9199</p>
+                </div> -->
+            </div>
+            <div id="FooterLegal">
+                <a href="https://www.syngenta.com.mx/terminos-y-condiciones" target="_blanck">Términos y condiciones</a>
+                <a href="https://www.syngenta.com.mx/aviso-de-privacidad-0" target="_blank">Política de privacidad Syngenta Agro</a>
+                <a href="https://www.syngenta.com.mx/aviso-de-privacidad-corporativo" target="_blanck">Política de privacidad Syngenta Corporativo</a>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>

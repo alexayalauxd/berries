@@ -1,0 +1,23 @@
+{
+  "name": "berries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexayalauxd/berries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexayalauxd/berries/issues"
+  },
+  "homepage": "https://github.com/alexayalauxd/berries#readme",
+  "dependencies": {
+    "exceljs": "^4.2.0",
+    "file-saver": "^2.0.5"
+  }
+}
