@@ -306,7 +306,7 @@ mainSyngenta.admininit = function(){
 					const rawResponse = await fetch('https://2o62j44a44.execute-api.us-east-1.amazonaws.com/dev/access', {
 						method: 'POST',
 						body: JSON.stringify({ 
-							"ub_psd": 'YTC956-SynG3nt42020._' //getPass
+							"ub_psd": getPass
 						})
 					});
 					const acc_response = await rawResponse.json();
@@ -326,12 +326,13 @@ mainSyngenta.admininit = function(){
 			document.getElementById('formulario__noresults').classList.remove('formulario__mensaje-activo');
 			document.getElementById('formulario__results').classList.remove('formulario__mensaje-activo');
 			let getPass = accessPassInput.value;
-			if(getPass){
+			
+			if(getPass && fromData.value && toData.value){
 				(async () => {
 					const rawResponse = await fetch('https://2o62j44a44.execute-api.us-east-1.amazonaws.com/dev/lead', {
 						method: 'POST',
 						body: JSON.stringify({ 
-							"ub_psd": sessionStorage.getItem('ad_869_KLH9_s'), //getPass,
+							"ub_psd": sessionStorage.getItem('ad_869_KLH9_s'),
 							"campaign": 'berries',
 							"from_data": (new Date(fromData.value).getTime()),
 							"to_data": (new Date(toData.value).getTime()),
@@ -342,9 +343,10 @@ mainSyngenta.admininit = function(){
 					if(data_response.Items.length > 0){
 						document.getElementById('formulario__results').classList.add('formulario__mensaje-activo');
 						createExcel(data_response.Items, (new Date(fromData.value)), (new Date(toData.value)));
-						console.log('Call excel function...');
+						requestDataForm.reset();
 					}else{
 						document.getElementById('formulario__noresults').classList.add('formulario__mensaje-activo');
+						requestDataForm.reset();
 					}
 				})().catch(error=>{
 					document.getElementById('formulario__noaccess').classList.add('formulario__mensaje-activo');
@@ -362,17 +364,66 @@ mainSyngenta.admininit = function(){
 }
 
 function createExcel(excel_data, fromDate, toDate){
-	console.log('Init Create Excel');
-	const workbook = new ExcelJS.Workbook();
-	const sheet = workbook.addWorksheet('Database');
-	console.log(workbook);
-	// console.log('Database(' + fromDate.toLocaleString("es-MX") + ')');
-	// console.log(excel_data, "excel_data:::")
+	let workbook = new ExcelJS.Workbook();
+	let sheet = workbook.addWorksheet('Database');
+	sheet.properties.defaultColWidth = 40;
+	sheet.properties.defaultRowHeight = 15;
+	sheet.pageSetup.verticalCentered = true;
+	
+	let headers = ['id', 'Nombre', 'Apellido(s)', 'Email', 'Ocupación', 'Teléfono', 'Estado', 'Municipio', 'No. de Hectareas', 'Tipo de Cultivo', 'Fecha', 'Acepto Términos', 'Campaña'];
+	sheet.addRow(headers);
+	
+	excel_data.forEach( usrData => {
+		let data = [];
+		for (const key in usrData) {
+			// console.log(key);
+			if(key == "id"){
+				data[0] = usrData[key];
+			}
+			if(key == "usr_name"){
+				data[1] = usrData[key];
+			}
+			if(key == "usr_lastname"){
+				data[2] = usrData[key];
+			}
+			if(key == "usr_mail"){
+				data[3] = usrData[key];
+			}
+			if(key == "usr_occupation"){
+				data[4] = usrData[key];
+			}
+			if(key == "usr_phone"){
+				data[5] = usrData[key];
+			}
+			if(key == "usr_state"){
+				data[6] = usrData[key];
+			}
+			if(key == "usr_local"){
+				data[7] = usrData[key];
+			}
+			if(key == "usr_hectares"){
+				data[8] = usrData[key];
+			}
+			if(key == "usr_farming"){
+				data[9] = usrData[key];
+			}
+			if(key == "createdAt"){
+				data[10] = (new Date(usrData[key]).toLocaleDateString());
+			}
+			if(key == "accept_terms"){
+				data[11] = usrData[key];
+			}
+			if(key == "campaign"){
+				data[12] = usrData[key];
+			}
+		}
+		sheet.addRow(data);
+	});
 
-	// excel_data.forEach( usrData => {
-	// 	console.log( usrData, "data user" );
-	// 	worksheet.addRows(usrData);
-	// });
+	workbook.xlsx.writeBuffer().then((data) => {
+		let blob = new Blob([data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+		saveAs(blob,"Syngenta_Berries_Database.xlsx");
+	});
 }
 
 
