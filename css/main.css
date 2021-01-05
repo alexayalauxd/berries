@@ -448,7 +448,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 #HomeMainContainer section#MainItems{
     padding: 40px;
-    padding:100px 0;
+    padding:100px 0 0 0;
 }
 #HomeMainContainer section#MainItems div#MainItemsTitles{
     padding: 0 0 100px 0;
