@@ -544,9 +544,16 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     }
 }
 @media (max-width: 768px){
+    #HomeMainContainer section#MainBanner .swiper-slide.fll-bg{
+        background-position-x: 60%;
+    }
+    
     #HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
         padding: 10px;
         width: 50%;
+    }
+    #HomeMainContainer section#MainSlogan{
+        background-position-x: 60%;
     }
 }
 @media(max-width: 600px){
@@ -574,6 +581,77 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     }
     #HomeMainContainer section#MainItems div#ItemsCont div.item-tech div.item-info .cont-img{
         margin: 0 auto;
+    }
+
+    #HomeMainContainer section#MainBanner .swiper-slide.fll-bg{
+        background-position-x: 70%;
+    }
+
+    #HomeMainContainer section#MainBanner .slider-infocont a{
+        font-size: 1rem;
+        min-width: inherit;
+        padding: 10px 70px;
+        border-radius: 5px;
+
+    }
+    #HomeMainContainer section#MainBanner,
+    #CertificacionContainer section#MainBanner{
+        height: 580px;
+        background-position-x: 70%;
+    }
+
+    #HomeMainContainer section#MainBanner .slider-infocont,
+    #CertificacionContainer section#MainBanner .slider-infocont{
+        background-color: rgba(0,0,0,0.8);
+        height: auto;
+        padding: 10px 10px 60px 10px !important;
+    }
+
+    #HomeMainContainer section#MainBanner .slider-infocont h2,
+    #CertificacionContainer section#MainBanner .slider-infocont h2{
+        font-size: 1.7rem;
+    }
+    #HomeMainContainer section#MainBanner .slider-infocont p,
+    #CertificacionContainer section#MainBanner .slider-infocont p{
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #HomeMainContainer section#MainBanner .slider-infocont img{
+        margin-top: -50px;
+        width: 20%;
+    }
+    #HomeMainContainer section#MainBanner .swiper-container .swiper-pagination{
+        width: 100%;
+        border-radius: 0;
+    }
+    #HomeMainContainer section#MainSlogan{
+        background-position-x: 80%;
+        height: 500px;
+        position: relative;
+    }
+    #HomeMainContainer section#MainSlogan .container{
+        background-color: rgba(0,0,0,0.8);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    #HomeMainContainer section#MainSlogan .container .info-cont h2{
+        color: #acc334;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+    #HomeMainContainer section#MainSlogan .container .info-cont p{
+        color: white;   
+        padding-bottom: 5px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #HomeMainContainer section#MainSlogan .container .info-cont br{
+        display: none;
     }
 }
 
@@ -949,7 +1027,7 @@ footer #FooterLegal a:last-child{
 
 @media(max-width: 600px){
     #CertificacionContainer section#MainBanner .slider-infocont{
-        padding: 250px 20px 0 20px !important;
+        padding: 10px !important;
         background-color:rgba(0,0,0,0.8);
     }
     #CertificacionContainer section#MainBanner .slider-infocont p span{
