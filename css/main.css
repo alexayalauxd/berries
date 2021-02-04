@@ -40,7 +40,8 @@ h1, h2, h3, h4, h5, p{
 section#MainBanner{
     height: 800px;
     background-color: rgb(235, 235, 235);
-    background-image: url('../images/banner_certificacion_2.png');
+    /* background-image: url('../images/banner_certificacion_2.png'); */
+    background-image: url('../images/Seminarios_Banner_NUEVO.png');
 }
 section#MainBanner .container .row{
     display: flex;
@@ -50,6 +51,9 @@ section#MainBanner .container .row .main-button{
     margin-top: 550px;
     cursor: pointer;
     background-color: #acc334;
+}
+section#MainBanner .bg-seminario{
+    background-image: url('../images/portafolio/Berries_MainBanner_04.png');
 }
 section#MainBanner .slider-infocont{
     position: absolute;
@@ -75,10 +79,10 @@ section#MainBanner .slider-infocont a{
     min-width: 300px;
 }
 @media(max-width: 900px){
-    section#MainBanner{
-        background-image: url('../images/banner_certificacion_3.png');
+    section#MainBanner .bg-seminario{
+        background-image: url('../images/portafolio/Berries_MainBanner_05.png');
     }
-    section#MainBanner .container .row .main-button{
+    section#MainBanner .bg-seminario .container .row .main-button{
         margin-top: 620px;
         font-size: 16px;
         cursor: pointer;
@@ -88,12 +92,12 @@ section#MainBanner .slider-infocont a{
     }
 }
 @media(max-width: 600px){
-    #CertificacionContainer section#MainBanner{
+    section#MainBanner .bg-seminario{
         height: 500px;
-        background-image: url('../images/banner_certificacion_4.png');
+        background-image: url('../images/portafolio/Berries_MainBanner_06.png');
     }
-    section#MainBanner .container .row .main-button{
-        margin-top: 400px;
+    section#MainBanner .bg-seminario .container .row .main-button{
+        margin-top: 450px;
         font-size: 18px;
         padding: 20px 30px;
         cursor: pointer;
@@ -128,9 +132,9 @@ section#MainBanner .slider-infocont a{
     }
 }
 
-@media(max-width: 480px){
-    section#MainBanner .container .row .main-button{
-        margin-top: 360px;
+@media(max-width: 500px){
+    section#MainBanner .bg-seminario .container .row .main-button{
+        margin-top: 420px;
     }
 }
 
@@ -584,10 +588,6 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     }
 }
 @media (max-width: 768px){
-    #HomeMainContainer section#MainBanner .swiper-slide.fll-bg{
-        background-position-x: 60%;
-    }
-    
     #HomeMainContainer section#MainItems div#ItemsCont div.item-tech{
         padding: 10px;
         width: 50%;
@@ -623,10 +623,6 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
         margin: 0 auto;
     }
 
-    #HomeMainContainer section#MainBanner .swiper-slide.fll-bg{
-        background-position-x: 70%;
-    }
-
     #HomeMainContainer section#MainBanner .slider-infocont a{
         font-size: 1rem;
         min-width: inherit;
@@ -637,6 +633,9 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     #HomeMainContainer section#MainBanner{
         height: 580px;
         background-position-x: 70%;
+    }
+    #CertificacionContainer section#MainBanner{
+        height: 580px;
     }
 
     #HomeMainContainer section#MainBanner .slider-infocont,
