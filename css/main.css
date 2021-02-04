@@ -40,6 +40,16 @@ h1, h2, h3, h4, h5, p{
 section#MainBanner{
     height: 800px;
     background-color: rgb(235, 235, 235);
+    background-image: url('../images/banner_certificacion_2.png');
+}
+section#MainBanner .container .row{
+    display: flex;
+    justify-content: center;
+}
+section#MainBanner .container .row .main-button{
+    margin-top: 550px;
+    cursor: pointer;
+    background-color: #acc334;
 }
 section#MainBanner .slider-infocont{
     position: absolute;
@@ -64,9 +74,33 @@ section#MainBanner .slider-infocont p span{
 section#MainBanner .slider-infocont a{
     min-width: 300px;
 }
-@media(max-width: 600px){
+@media(max-width: 900px){
     section#MainBanner{
+        background-image: url('../images/banner_certificacion_3.png');
+    }
+    section#MainBanner .container .row .main-button{
+        margin-top: 620px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #Table .container .row .main-button{
+        font-size: 16px;
+    }
+}
+@media(max-width: 600px){
+    #CertificacionContainer section#MainBanner{
         height: 500px;
+        background-image: url('../images/banner_certificacion_4.png');
+    }
+    section#MainBanner .container .row .main-button{
+        margin-top: 400px;
+        font-size: 18px;
+        padding: 20px 30px;
+        cursor: pointer;
+    }
+    #Table .container .row .main-button{
+        font-size: 18px;
+        padding: 20px 30px;
     }
     section#MainBanner .slider-infocont{
         width: 100% !important;
@@ -91,6 +125,12 @@ section#MainBanner .slider-infocont a{
         font-size: 1rem;
         min-width: inherit;
         padding: 16px 52px;
+    }
+}
+
+@media(max-width: 480px){
+    section#MainBanner .container .row .main-button{
+        margin-top: 360px;
     }
 }
 
@@ -594,8 +634,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
         border-radius: 5px;
 
     }
-    #HomeMainContainer section#MainBanner,
-    #CertificacionContainer section#MainBanner{
+    #HomeMainContainer section#MainBanner{
         height: 580px;
         background-position-x: 70%;
     }
@@ -1069,7 +1108,6 @@ footer #FooterLegal a:last-child{
     font-size: 2em;
 }
 #Table .container .row .main-button{
-    margin-top: 40px;
     cursor: pointer;
 }
 
