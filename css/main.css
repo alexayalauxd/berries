@@ -92,6 +92,10 @@ section#MainBanner .slider-infocont a{
     }
 }
 @media(max-width: 600px){
+    section#MainBanner .bg-moras,
+    section#MainBanner .bg-fresas{
+        background-position: 72% 40px;
+    }
     section#MainBanner .bg-seminario{
         height: 500px;
         background-image: url('../images/portafolio/Berries_MainBanner_06.png');
