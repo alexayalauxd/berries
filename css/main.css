@@ -636,6 +636,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     }
     #CertificacionContainer section#MainBanner{
         height: 580px;
+        background-position: 65% -92px;
     }
 
     #HomeMainContainer section#MainBanner .slider-infocont,
