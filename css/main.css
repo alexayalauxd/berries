@@ -53,7 +53,19 @@ section#MainBanner .container .row .main-button{
     background-color: #acc334;
 }
 section#MainBanner .bg-seminario{
-    background-image: url('../images/portafolio/Berries_MainBanner_04.png');
+    background-image: url('../images/portafolio/Berries_MainBanner_Seminario_bg.jpg');
+    text-align: center;
+    padding: 150px 0;
+}
+section#MainBanner .bg-seminario img{
+    display: block;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 40px 0;
+    max-width: 300px;
+}
+section#MainBanner .bg-seminario img:first-child{
+    max-width: 400px;
 }
 section#MainBanner .slider-infocont{
     position: absolute;
@@ -79,9 +91,6 @@ section#MainBanner .slider-infocont a{
     min-width: 300px;
 }
 @media(max-width: 900px){
-    section#MainBanner .bg-seminario{
-        background-image: url('../images/portafolio/Berries_MainBanner_05.png');
-    }
     section#MainBanner .bg-seminario .container .row .main-button{
         margin-top: 620px;
         font-size: 16px;
@@ -97,14 +106,14 @@ section#MainBanner .slider-infocont a{
         background-position: 72% 40px;
     }
     section#MainBanner .bg-seminario{
-        height: 500px;
-        background-image: url('../images/portafolio/Berries_MainBanner_06.png');
+        padding: 0;
     }
-    section#MainBanner .bg-seminario .container .row .main-button{
-        margin-top: 450px;
-        font-size: 18px;
-        padding: 20px 30px;
-        cursor: pointer;
+    section#MainBanner .bg-seminario img{
+        max-width: 200px;
+    }
+    section#MainBanner .bg-seminario img:first-child{
+        max-width: 230px;
+        margin-top: 100px;
     }
     #Table .container .row .main-button{
         font-size: 18px;
@@ -133,12 +142,6 @@ section#MainBanner .slider-infocont a{
         font-size: 1rem;
         min-width: inherit;
         padding: 16px 52px;
-    }
-}
-
-@media(max-width: 500px){
-    section#MainBanner .bg-seminario .container .row .main-button{
-        margin-top: 420px;
     }
 }
 
